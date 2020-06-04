@@ -6,6 +6,15 @@ echo "postBuild start time: $(date)" >> $CONDA_DIR/m269_image_build_time.txt
 INSTALL_PREFIX=sys-prefix  #user
 
 
+##VSCode editor
+# via https://github.com/betatim/vscode-binder
+# Enable the proxy extension in notebook and lab
+jupyter serverextension enable --py jupyter_server_proxy
+jupyter labextension install @jupyterlab/server-proxy
+jupyter lab build
+
+code-server --install-extension ms-python.python
+
 ## nbextensions
 ### The official unofficial extensions distribution
 jupyter contrib nbextension install --$INSTALL_PREFIX
