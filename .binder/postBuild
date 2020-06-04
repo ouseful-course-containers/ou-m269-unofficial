@@ -1,0 +1,63 @@
+# Copy in a datestamp for start of postBuild activity
+echo "postBuild start time: $(date)" >> $CONDA_DIR/m269_image_build_time.txt
+
+# Install and enable extensions
+
+INSTALL_PREFIX=sys-prefix  #user
+
+
+## nbextensions
+### The official unofficial extensions distribution
+jupyter contrib nbextension install --$INSTALL_PREFIX
+jupyter nbextensions_configurator enable --$INSTALL_PREFIX
+## By default, the majority of extensions are disabled by default
+### Nicer code warning / error message display
+jupyter nbextension enable skip-traceback/main --$INSTALL_PREFIX
+### Collapsible headings can help in notebook user interaction design
+jupyter nbextension enable collapsible_headings/main --$INSTALL_PREFIX
+### Codefolding may be useful BUT it interferes with nbtutor...
+#jupyter nbextension enable codefolding/main --$INSTALL_PREFIX
+### Allow users to highlight elements
+jupyter nbextension enable highlighter/highlighter --$INSTALL_PREFIX
+
+
+## nbgitpuller
+### This allows us to easily pull in files from Github
+jupyter serverextension enable nbgitpuller --$INSTALL_PREFIX
+
+
+#nbtutor
+jupyter nbextension install--py nbtutor --$INSTALL_PREFIX
+jupyter nbextension enable --py nbtutor --$INSTALL_PREFIX
+
+
+## nbzip
+### Zip and export all notebooks
+jupyter serverextension enable --py nbzip --$INSTALL_PREFIX
+jupyter nbextension install --py nbzip --$INSTALL_PREFIX
+jupyter nbextension enable --py nbzip --$INSTALL_PREFIX
+
+
+## multi-outputs
+### Cell status indicators.
+### There's also a tool so save cell output for diffing but this may be overcomplicated.
+### Consider forking to support disabling the pinned cell output features
+jupyter nbextension install --py lc_multi_outputs --$INSTALL_PREFIX
+jupyter nbextension enable --py lc_multi_outputs --$INSTALL_PREFIX
+
+
+
+
+## WYSIWYG notebook markdown editor
+jupyter nbextension install --py jupyter_wysiwyg  --$INSTALL_PREFIX
+
+
+# Copy in a datestamp of end of build - checks we got this far as well!
+echo "postBuild end time: $(date)" >> $CONDA_DIR/tm129_image_build_time.txt
+© 2020 GitHub, Inc.
+## Document export
+jupyter bundlerextension enable --py jupyter_docx_bundler --$INSTALL_PREFIX
+
+
+# Copy in a datestamp of end of build - checks we got this far as well!
+echo "postBuild end time: $(date)" >> $CONDA_DIR/m269_image_build_time.txt
