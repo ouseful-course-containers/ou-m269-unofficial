@@ -1,4 +1,4 @@
 channels:
-    - conda-forge
-  dependencies:
-    - code-server >=3.2
+  - conda-forge
+dependencies:
+  - code-server >=3.2
