@@ -1,0 +1,50 @@
+# Updates
+ipywidgets>=7.5.0
+nbconvert>=5.5.0
+
+# Base environment
+jupyter_contrib_nbextensions
+jupytext
+
+
+#Text editor
+jupyter-wysiwyg
+
+#Code Editor
+jupyter-vscode-proxy
+
+#Tutor
+nbtutor
+RISE
+git+https://github.com/innovationOUtside/nb_cell_diff.git
+
+# Base box utility
+nbgitpuller
+
+# Document export
+nbzip
+jupyter-docx-bundler
+
+#Linting
+flake8
+pycodestyle
+pycodestyle_magic
+## Install additional style convention rules
+pep8-naming
+flake8-bugbear
+flake8-docstrings
+flake8-builtins
+## Provide additional conventions for pandas code
+pandas-vet
+## Autorepair
+autopep8
+
+# Monitoring and feedback
+nbresuse
+tqdm
+git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs
+git+https://github.com/innovationOUtside/nb_extension_empinken.git
+
+
+# Module requirements
+networkx
