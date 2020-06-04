@@ -13,7 +13,6 @@ jupyter-wysiwyg
 #Code Editor
 numpy
 jupyter-server-proxy
-code-server>=3.2
 jupyter-vscode-proxy
 
 #Tutor
