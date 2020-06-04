@@ -8,7 +8,7 @@ INSTALL_PREFIX=sys-prefix  #user
 ##VSCode editor
 # via https://github.com/betatim/vscode-binder
 # Enable the proxy extension in notebook and lab
-conda env update --name base --file environment_vscode.yml
+conda update --name base --file environment_vscode.yml
 jupyter serverextension enable --py jupyter_server_proxy
 jupyter labextension install @jupyterlab/server-proxy
 jupyter lab build
