@@ -1,0 +1,11 @@
+# Production support
+## Spellchecker support
+aspell
+hunspell
+
+# Notebook conversion and export
+pandoc
+
+# Utilities
+zip # Handy if students need to zip files themselves for download / export
+unzip #This should already be installed
