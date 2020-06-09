@@ -4,7 +4,9 @@ M269 unofficial testing repo
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://gke.mybinder.org/v2/gh/ouseful-course-containers/ou-m269-unofficial/master)
 
-This repository demonstrates a computing environment that is appropriate for the practical activities for the updated version of the OU course M269 due for release in 202x.
+This repository demonstrates a computing environment that is appropriate for the practical activities for the updated version of the OU course M269 due for release in 202x. It also includes a version of the VSCode IDE.
+
+![](.images/jupyter_vscode_launch.png)
 
 A Docker container image built from the repository using `repo2docker` is available on Dockerhub: [`ousefuldemos/ou-m269-unofficial`](https://hub.docker.com/repository/docker/ousefuldemos/ouseful-course-containers/ou-m269-unofficial)
 
