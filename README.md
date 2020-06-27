@@ -34,7 +34,7 @@ When you run the `docker` command, several things will happen:
  - first, docker will download the container image from DockerHub (this may take some time but only happens the first time you try to run the container);
  - then, docker will launch the container and a Jupyter notebook server will start running inside it.
  
-When the container is running, go to [`localhost:8129`](http://localhost:8129) in your browser (if that doesn't work, try [`127.0.0.1:8269`](http://127.0.0.1:8269)) and you should see a running notebook server there.
+When the container is running, go to [`localhost:8269`](http://localhost:8269) in your browser (if that doesn't work, try [`127.0.0.1:8269`](http://127.0.0.1:8269)) and you should see a running notebook server there.
 
 Use the token `letmein` to access the server (you should only need to do this once).
  
